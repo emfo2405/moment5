@@ -1,0 +1,41 @@
+@keyframes moveText {
+    0% {
+        left: -30px;
+    }
+
+    100% {
+        left: 30px;
+    }
+}
+
+@keyframes addShadow {
+    0% {
+        box-shadow: 5px 5px;
+    }
+
+    100% {
+        box-shadow: 10px 10px;
+    }
+}
+
+@keyframes moveObject {
+    0% {
+        transform: scale(2,2);
+        transform: translate(0px,20px);
+    }
+
+    100% {
+        transform: scale(1,1);
+        transform: translate(0px, -10px);
+    }
+}
+
+@keyframes spinObject {
+    0% {
+        transform: rotate(-1deg);
+    }
+
+    100% {
+        transform: rotate(1deg);
+    }
+}

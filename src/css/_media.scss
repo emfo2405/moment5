@@ -1,0 +1,171 @@
+
+/*Mörkt tema*/
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: #200000;
+      @include text-color(#200000);
+    }
+  
+    main {
+      background-color: #410000;
+  
+    }
+  
+  }
+
+  /*Mindre skärmstorlekar*/
+  @media (max-width: 1000px) {
+  
+    /*Design av humbuergermeny*/
+    #sidtitel-small {
+      text-align: left;
+    }
+  
+    #sidtitel {
+      display: none;
+    }
+  
+    #headmenu-small {
+      display: initial;
+    }
+  
+    #headmenu {
+      display: none;
+    }
+  
+    /*Design av hamburgermeny*/
+    .headmenu-small-div {
+      overflow: hidden;
+      background-color: $highlight-color;
+      position: relative;
+    }
+  
+    .headmenu-small-div #menu-small {
+      display: none;
+    }
+  
+    .headmenu-small-div a {
+      color: $text-color;
+      padding: 14px 14px;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+    }
+  
+  
+    #menu-small {
+      list-style-type: none;
+      margin-top: -5%;
+  
+      a:hover {
+        color: white;
+        background-color: darken($highlight-color, 10%);
+        width: 30%;
+        margin: auto;
+      }
+  
+    }
+  
+    .bars {
+      display: block;
+      width: 20px;
+      height: 3px;
+      background-color: white;
+      margin: 5px 0;
+    }
+  
+    .menu-btn {
+      display: flex;
+      align-items: center;
+      padding: 8px 5px;
+      background-color: $highlight-color;
+      cursor: pointer;
+      box-shadow: none;
+    }
+  
+    .open {
+      display: flex;
+      margin: 1em 1em;
+      padding: 8px 15px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      margin-top: 35px;
+    }
+  
+    .menu-icon {
+      margin-right: 15px;
+  
+    }
+  
+    .menu-text {
+      font-size: 1.3em;
+      color: white;
+  
+    }
+  
+    .close {
+      display: flex;
+      margin: 1em 1em;
+      padding: 12px 11px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      margin-top: 35px;
+    }
+  
+    #open-menu,
+    #close-menu {
+      box-shadow: none;
+      border: none;
+    }
+  
+    .cross1 {
+      width: 25px;
+      transform: rotate(45deg);
+      position: relative;
+      top: 5px;
+    }
+  
+    .cross2 {
+      width: 25px;
+      transform: rotate(135deg);
+      position: relative;
+      top: -3px;
+    }
+  
+    .menu-btn-open,
+    .menu-btn.close,
+    #open-menu {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  
+    #open-menu {
+      z-index: 2;
+    }
+  
+    .image {
+      width: 70%;
+      margin-left: 15%;
+    }
+  
+    #inledning-sektion {
+      width: 80%;
+    }
+  
+    #about {
+      @extend #inledning-sektion;
+    }
+  
+    #arbetsprocess {
+      @extend #inledning-sektion;
+    }
+
+    #animation-text {
+      @extend #inledning-sektion;
+    }
+  
+  }
+

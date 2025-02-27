@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <!--Grundinställningar och tillägg av CSS-fil och JavaScript-fil-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 3</title>
+    <link rel="stylesheet" href="css/main.scss" />
+    <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="grid-container">
+            <header>
+                <a id="sidtitel" href="index.html">
+                    <h1>
+                        Moment 4
+                    </h1>
+                </a>
+                <!--Hamaburgermeny-->
+                <div id="headmenu-small">
+                    <div class="headmenu-small-div">
+                        <a id="sidtitel-small" href="index.html">
+                            <h1>
+                                Moment 4
+                            </h1>
+                        </a>
+                        <ul id="menu-small">
+                            <li><a href="index.html">Hem</a></li>
+                            <li><a href="sass.html">Sass</a></li>
+                            <li><a href="diagram.html">Diagram</a></li>
+                            <li><a href="karta.html">Karta</a></li>
+                            <li><a href="animationer.html">Animationer</a></li>
+                        </ul>
+                        <!--Menyikon för öppna-->
+                        <button class="menu-btn open" id="open-menu">
+                            <span class="menu-icon">
+                                <span class="bars"></span>
+                                <span class="bars"></span>
+                                <span class="bars"></span>
+                            </span>
+                            <span class="menu-text">Meny</span>
+                        </button>
+                        <!--Menyikon för stäng-->
+                        <button class="menu-btn close" id="close-menu">
+                            <span class="menu-icon">
+                                <span class="bars cross1"></span>
+                                <span class="bars cross2"></span>
+                            </span>
+                            <span class="menu-text">Stäng</span>
+                        </button>
+                    </div>
+                </div>
+                <!--Meny-->
+                <div id="headmenu">
+                    <nav>
+                        <ul id="menu">
+                            <li><a href="index.html">Hem</a></li>
+                            <li><a href="sass.html">Sass</a></li>
+                            <li><a href="diagram.html">Diagram</a></li>
+                            <li><a href="karta.html">Karta</a></li>
+                            <li><a href="animationer.html">Animationer</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <section id="inledning-sektion">
+                <h1>Uppgiftsbeskrivning</h1>
+                <p>Syftet med uppgiften i moment 3 är att börja använda CSS-preprocessorer och på det sättet underlätta
+                    utvecklingen av webbplatser.
+                    I uppgiften ska SASS användas för att göra arbetet med CSS enklare och även för att kunna använda
+                    nya metoder i SASS som inte har
+                    kunnat användas med vanlig CSS. Metoden blir att skapa en webbplats bestående av två sidor samt
+                    menyalternativ för ytterligare tre sidor,
+                    som sedan ska designas med SASS. Grunden för webbplatsen är också att använda sig utav den
+                    boilerplate som skapades för moment 1.
+                </p>
+            </section>
+
+            <div id="button">
+                <a href="sass.html">Läs mer om arbetsprocessen här</a>
+            </div>
+
+            <div id="about">
+                <h2>Om utvecklaren</h2>
+                <p>Jag heter Emma och har skapat den här webbplatsen. Jag har lite erfarenhet av HTML, CSS och
+                    JavaScript och håller nu på att lära mig att använda SASS.
+                    Jag går första året på programmet Webbutveckling på Mittuniversitetet men har tidigare pluggat fysik
+                    och miljövetenskap.
+                </p>
+            </div>
+
+            <div id="about-button">
+                <a href=#>Mer om utvecklaren</a>
+            </div>
+
+
+            <!--Bilder infogade och omvandlade till avif och webp med satt bredd-->
+
+            <div id="image1">
+                <picture>
+                    <source srcset="images/Blommor1.png?as=avif&width=800" type="image/avif">
+                    <source srcset="images/Blommor1.png?as=webp&width=800" type="image/webp">
+                    <img class="image" src="images/Blommor1.png?width=800" alt="Målning av röda blommor">
+                </picture>
+            </div>
+
+            <div id="image2">
+                <picture>
+                    <source srcset="images/Blommor2.png?as=avif&width=800" type="image/avif">
+                    <source srcset="images/Blommor2.png?as=webp&width=800" type="image/webp">
+                    <img class="image" src="images/Blommor2.png?width=800" alt="Målning av röda bär">
+                </picture>
+            </div>
+
+
+            <!--sidans footer-->
+            <footer>
+                <p>Moment 4 <br>
+                    emfo2405</p>
+            </footer>
+        </div>
+
+    </main>
+</body>
+
+</html>

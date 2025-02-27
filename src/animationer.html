@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <!--Grundinställningar och tillägg av CSS-fil och JavaScript-fil-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 3</title>
+    <link rel="stylesheet" href="css/main.scss" />
+    <script type="module" src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <main>
+        <div class="grid-container">
+            <header>
+                <a id="sidtitel" href="index.html">
+                    <h1>
+                        Moment 4
+                    </h1>
+                </a>
+                <!--Hamaburgermeny-->
+                <div id="headmenu-small">
+                    <div class="headmenu-small-div">
+                        <a id="sidtitel-small" href="index.html">
+                            <h1>
+                                Moment 4
+                            </h1>
+                        </a>
+                        <ul id="menu-small">
+                            <li><a href="index.html">Hem</a></li>
+                            <li><a href="sass.html">Sass</a></li>
+                            <li><a href="diagram.html">Diagram</a></li>
+                            <li><a href="karta.html">Karta</a></li>
+                            <li><a href="animationer.html">Animationer</a></li>
+                        </ul>
+                        <!--Menyikon för öppna-->
+                        <button class="menu-btn open" id="open-menu">
+                            <span class="menu-icon">
+                                <span class="bars"></span>
+                                <span class="bars"></span>
+                                <span class="bars"></span>
+                            </span>
+                            <span class="menu-text">Meny</span>
+                        </button>
+                        <!--Menyikon för stäng-->
+                        <button class="menu-btn close" id="close-menu">
+                            <span class="menu-icon">
+                                <span class="bars cross1"></span>
+                                <span class="bars cross2"></span>
+                            </span>
+                            <span class="menu-text">Stäng</span>
+                        </button>
+                    </div>
+                </div>
+                <!--Meny-->
+                <div id="headmenu">
+                    <nav>
+                        <ul id="menu">
+                            <li><a href="index.html">Hem</a></li>
+                            <li><a href="sass.html">Sass</a></li>
+                            <li><a href="diagram.html">Diagram</a></li>
+                            <li><a href="karta.html">Karta</a></li>
+                            <li><a href="animationer.html">Animationer</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <div id="animation-text">
+<h1 id="animation-title">Animationer</h1>
+<p>Syftet med den här uppgiften är att skapa olika sorters animeringar. Den här sidan ska visa upp tre olika typer av animationer, text- eller bildanimation, rörliga objekt och användarinteraktion. <br>
+Den här sidan visar animationer på sidtiteln, knappen till moment 3, linjen under knappen, handen som pekar på kontaktformuläret och 
+själva kontaktformuläret när man klickar på skicka. <br>
+För att läsa mer om moment 3, klicka på knappen nedan.</p>
+</div>
+
+<div id="animation-button">
+    <a href="index.html">Till moment 3</a>
+</div>
+
+<div id="animation-line">
+    
+</div>
+
+<div id="kontakt-titel">
+<h2>Kontakta oss här</h2>
+</div>
+
+<div id="animation-hand">
+    <i id="hand-symbol" class="fa fa-hand-o-down"></i>
+</div>
+
+
+
+<div id="contact-form">
+    <h2>Kontaktformulär</h2>
+    <form id="form-content">
+      <label for="name">Namn:</label>
+      <input type="text" id="name" name="name" placeholder="Ditt namn..."><br>
+  
+      <label for="email">E-post:</label>
+      <input type="email" id="email" name="email" placeholder="Din e-post..."><br>
+  
+      <label for="message">Meddelande:</label>
+      <input type="text" id="message" name="message" placeholder="Skriv ditt meddelande här..."><br>
+  
+      <button type="submit" id="submit-button">Skicka</button>
+
+
+    </form>
+  </div>
+
+  <div id="thumbs-up">
+    <picture>
+        <source srcset="images/thumbsup.png?as=avif&width=500" type="image/avif">
+        <source srcset="images/thumbsup.png?as=webp&width=500" type="image/webp">
+        <img class="image" src="images/thumbsup.png?width=500" alt="En grön tumme upp">
+    </picture>
+  </div>
+
+
+            <!--sidans footer-->
+            <footer>
+                <p>Moment 4 <br>
+                    emfo2405</p>
+            </footer>
+        </div>
+
+    </main>
+</body>
+
+</html>
