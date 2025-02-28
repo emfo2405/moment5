@@ -3,6 +3,7 @@
   //En tom array
   let data = [];
 
+
 window.onload = fetchData;
 
 //läser in öppna och stäng knappar för meny
@@ -79,25 +80,45 @@ function printCourses(data) {
   courseEl = data.filter(val => val.type == "Kurs");
   console.table(courseEl);
 
+
   const top5 = courseEl.slice(0,6);
 
-  takeElements(top5);
-}
+  const cName = top5.map(kurs => kurs.name);
+  const appl = top5.map(kurs => kurs.applicantsTotal);
 
-function takeElements(top5) {
+console.log(cName);
+console.log(appl);
 
-  top5.forEach(element => {
-    let name = [];
-    let appl = [];
-    name = element.name;
-    appl = element.applicantsTotal;
-
-  });
-
+drawDiagram(cName, appl)
 
 }
 
+//Diagram
 
+function drawDiagram(cName, appl) {
+const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: cName,
+    datasets: [{
+      label: 'Totalt antal sökande',
+      data: appl,
+      borderWidth: 2
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+    
+  }
+});
+
+}
 
 
 
