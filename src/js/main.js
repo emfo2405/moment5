@@ -1,11 +1,5 @@
 "use strict";
 
-  //En tom array
-  let data = [];
-
-
-window.onload = fetchData;
-
 //läser in öppna och stäng knappar för meny
 let openBtn = document.getElementById("open-menu");
 let closeBtn = document.getElementById("close-menu");
@@ -29,96 +23,10 @@ function myFunction() {
     }
   }
 
-  let sendBtn=document.getElementById("submit-button");
-  sendBtn.addEventListener('click',animation)
-
-  function animation() {
-    let contactForm = document.getElementById("contact-Form");
-
-    contactForm.style.position = "relative";
-
-  }
 
 
 
-  //Hämta in data för kurser och program
-  async function fetchData() {
-    try {
-        //Hämtar in data
-        const response = await fetch('https://studenter.miun.se/~mallar/dt211g/');
-        //Felmeddelande om datan inte läses in korrekt
-        if (!response.ok) {
-            throw new Error("Fel vid anslutning till data...");
-        }
 
-        //sparar datan till den tomma arrayen
-        data = await response.json();
-
-        //Kör funktioner för att skriva ut data
-
-        sortAppl(data);
-
-        //Felmeddelande om något går fel
-    } catch (error) {
-        console.error(error);
-    }
-}
-
-function sortAppl(data) {
-  
-    data.sort((a, b) => b.applicantsTotal - a.applicantsTotal);
-    console.table(data);
-
-    printCourses(data);
-
-}
-
-
-
-function printCourses(data) {
-  let courseEl = [];
-  courseEl = data.filter(val => val.type == "Kurs");
-  console.table(courseEl);
-
-
-  const top5 = courseEl.slice(0,6);
-
-  const cName = top5.map(kurs => kurs.name);
-  const appl = top5.map(kurs => kurs.applicantsTotal);
-
-console.log(cName);
-console.log(appl);
-
-drawDiagram(cName, appl)
-
-}
-
-//Diagram
-
-function drawDiagram(cName, appl) {
-const ctx = document.getElementById('myChart');
-
-new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: cName,
-    datasets: [{
-      label: 'Totalt antal sökande',
-      data: appl,
-      borderWidth: 2
-    }]
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-    
-  }
-});
-
-}
 
 
 
