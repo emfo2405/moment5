@@ -3,7 +3,7 @@
 let data = [];
 
 window.onload = getCoordinates;
-window.onload = fetchData;
+
 
 
 
@@ -24,10 +24,18 @@ window.onload = fetchData;
     }
     }
 
+
+    document.getElementById('search-button').onclick = fetchData;
+
     async function fetchData() {
         try {
             //Hämtar in data
-            const response = await fetch('https://nominatim.openstreetmap.org/search?q=17+Strada+Pictor+Alexandru+Romano%2C+Bukarest&format=geojson');
+            const searchInput = document.getElementById("search").value;
+
+            console.log(searchInput);
+
+
+            const response = await fetch(`https://nominatim.openstreetmap.org/search?q=${searchInput}&format=geojson`);
             //Felmeddelande om datan inte läses in korrekt
             if (!response.ok) {
                 throw new Error("Fel vid anslutning till data...");
@@ -39,11 +47,24 @@ window.onload = fetchData;
             //Kör funktioner för att skriva ut data
     
             console.table(data);
+
+            takeData(data);
     
             //Felmeddelande om något går fel
         } catch (error) {
             console.error(error);
         }
+    }
+
+    function takeData(data) {
+
+const feature = data.features;
+console.log(feature);
+
+const coordinates = feature.geometry;
+console.log(coordinates);
+
+
     }
 
 
