@@ -313,13 +313,20 @@ padding-right:5%;
   height: 500px;
 }
 
-#karta {
+#karta-div {
   margin:auto;
 }
 
 #search-bar {
   margin:auto;
   padding: 5%;
+}
+
+#karta {
+  border: 1px solid black;
+  width:425;
+    height:350;
+
 }
 
 
