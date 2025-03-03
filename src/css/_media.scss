@@ -166,6 +166,33 @@
     #animation-text {
       @extend #inledning-sektion;
     }
+
+    #diagram {
+      width: 400px;
+    }
+
+    #diagram2 {
+      width: 400px;
+      height: 400px;
+      margin-top: -27%;
+      margin-bottom: 20%;
+    }
+
+    #karta {
+      width: 400px;
+      height: 400px;
+    }
+
+    #search-bar {
+      input[type=text] {
+        width: 40%;
+    margin-left: 27%;
+      }
+    }
+
+
   
   }
+
+
 
