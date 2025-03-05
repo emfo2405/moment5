@@ -151,7 +151,7 @@ function drawDiagram(cName, appl) {
 
 //Rita diagram över program
 /**
- * @function drawDiagramP - ritar ett stapeldiagram
+ * @function drawDiagramP - ritar ett cirkeldiagram
  * @param {Array} pName - namn över program 
  * @param {Array} pAppl - totalt antal sökande i programmen
  * @param ctx - hämtar ett element med ID 'myChart2'

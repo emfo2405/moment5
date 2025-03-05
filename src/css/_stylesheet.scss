@@ -353,5 +353,24 @@ margin-left: 34%;
 
 }
 
+#jsdocs {
+  text-align: center;
+  padding: 2%;
+  a {
+    text-decoration: none;
+    color: darken($highlight-color,20%);
+    font-size: 130%;
+  }
+
+  a:hover{
+    color: $highlight-color;
+  }
+}
+
+#jsdocs2 {
+  @extend #jsdocs;
+  padding-bottom: 0%;
+}
+
 
 
